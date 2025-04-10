@@ -6,6 +6,8 @@ import { useParams } from 'react-router-dom'
 import { PiStarFill } from "react-icons/pi";
 import { AppContext } from '../App';
 import toast from 'react-hot-toast';
+import { FaCircleMinus } from 'react-icons/fa6';
+import { BsFillPlusCircleFill } from 'react-icons/bs';
 
 const ProductPage = () => {
 const {cart,setCart}=useContext(AppContext);
@@ -66,8 +68,16 @@ getProduct(id);
         
         <h2>&#8377; {product?.price}</h2>
         <div ><h3>Category : </h3><p> {product?.category}</p></div>
+      
+   
+
+      
+                      
+        <div className='proqua'><h3>Quantity</h3>
+        <div  onClick={()=>{const value=Math.max(1,quantity+1);setQuantity(value);}}><BsFillPlusCircleFill role='button' tabIndex={0}/></div><input style={{width:'100px'}} type="number" min="1" value={quantity} readOnly />
+        <div onClick={()=>{const value=Math.max(1,quantity-1);setQuantity(value);}}><FaCircleMinus role='button' tabIndex={0}  /></div>
         
-        <div className='proqua'><h3>Quantity</h3><input style={{width:'100px'}} type="number" min="1" value={quantity} onChange={(e)=>{const value=Math.max(1,Number(e.target.value));setQuantity(value)}}/></div>
+        </div>
 
         <div style={{display:'flex',width:'300px',gap:'5px'}}>
        
