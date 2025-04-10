@@ -314,6 +314,9 @@ padding: 10px;
 
 }
 
-@media screen {
-  
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+  -webkit-appearance:auto;
+  margin:0;
 }
+

@@ -67,7 +67,7 @@ getProduct(id);
         <h2>&#8377; {product?.price}</h2>
         <div ><h3>Category : </h3><p> {product?.category}</p></div>
         
-        <div className='proqua'><h3>Quantity</h3><input type="number" min="1" value={quantity} onChange={(e)=>{setQuantity(e.target.value)}}/></div>
+        <div className='proqua'><h3>Quantity</h3><input style={{width:'100px'}} type="number" min="1" value={quantity} onChange={(e)=>{const value=Math.max(1,Number(e.target.value));setQuantity(value)}}/></div>
 
         <div style={{display:'flex',width:'300px',gap:'5px'}}>
        
