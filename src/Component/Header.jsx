@@ -11,7 +11,7 @@ const Header = () => {
   const logout=()=>{
   localStorage.removeItem("token");
   setUser(false);
-  navigate('/login');
+  navigate('/');
   toast.success("Logged out successfully");
   }
   return (

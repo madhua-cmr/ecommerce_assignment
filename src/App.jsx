@@ -19,7 +19,7 @@ if(localStorage.getItem("token")){
     <>
       <AppContext.Provider value={{ cart, setCart,setUser }}>
         <Routes>
-          <Route path="/login" element={<LoginPage/>} />
+          <Route path="/" element={<LoginPage/>} />
           <Route path="/home" element={isuser?<><Header/><HomePage/></>:<LoginPage/>} />
           <Route path="/cart" element={isuser?<><Header/><CartPage/></>:<LoginPage/>} />
           <Route path="/product/:id" element={isuser?<><Header/><ProductPage/></>:<LoginPage/>} />
