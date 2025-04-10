@@ -67,7 +67,7 @@ useEffect(()=>{
       <div >
       {cart?.length==0&&<div>
         <h2>Your Cart is Empty 🙁</h2></div>}
-        {cart?.length!=0&&<div>  
+        {cart?.length!= 0 &&<div>  
           <div style={{display:'flex',flexDirection:'row',justifyContent:'space-between'}}><h1>Your cart is awaiting for you 😀</h1><div style={{cursor:"pointer",fontSize:"40px"}}onClick={()=>deleteCart()}>🚮</div></div>
           
         

@@ -30,7 +30,7 @@ img {
 
 
 nav {
-
+  width: 100%;
   background-color: rgb(17, 17, 27);
   
   display: flex;
@@ -296,6 +296,7 @@ button{
   width:250px;
   margin:10px;
   height: 40px;
+  cursor:pointer;
    background-color: #133355;
    color: whitesmoke;
   border-radius:10px;
